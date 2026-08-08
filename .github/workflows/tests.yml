@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   coverage:
-    name: Tests with coverage
+    name: Tests with Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -23,7 +23,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:coverage
-      - run: actions/upload-artifact@v7
       - uses: actions/upload-artifact@v7
         with:
           name: test-coverage-report
